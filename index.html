@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --white: #fff;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --dark: #343a40;
+    --light: #f8f9fa;
+}
+
+/* text color */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-success { color: var(--success); }
+.text-danger { color: var(--danger); }
+.text-warning { color: var(--warning); }
+.text-info { color: var(--info); }
+.text-dark { color: var(--dark); }
+.text-light { color: var(--light); }
+
+/* bg-colors */
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-success { background-color: var(--success); }
+.bg-danger { background-color: var(--danger); }
+.bg-warning { background-color: var(--warning); }
+.bg-info { background-color: var(--info); }
+.bg-dark { background-color: var(--dark); }
+.bg-light { background-color: var(--light); }
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+#main-header{
+    background-color: var(--dark);
+    
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    opacity: 0.7;
+    
+   
+    
+}
+
+
+#main-header .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    
+    
+}
+
+#main-header h1{
+   
+   
+    padding: 10px 0;
+    text-align: left;
+    margin: 10px 0;
+    font-size: 40px;
+    color: var(--warning);
+    
+}
+#main-header span{
+font-weight: 700;
+color: var(--light);
+}
+#main-header ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#main-header ul li{
+    padding: 5px;
+    margin: 5px;
+   
+    
+}
+#main-header ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+}
+#main-header ul li a:hover{
+    border-bottom: 2px solid var(--warning);
+}
+#main-section {
+    background: url(../html/spor-img/cathy-pham-3jAN9InapQI-unsplash.jpg);
+    height: 100vh;
+    /* width: 100%; */
+    background-position: top;
+    background-size: cover;
+    opacity: 0.95;
+    position: relative;
+  }  
+  .main-section__contents{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+   } 
+   .main-section__contents span{
+    color: var(--light);
+    font-size: 70px;
+   }
+   .main-section__contents h1{
+    font-size: 60px;
+    color: var(--warning);
+   }
+   .main-section__contents .icons {
+    display: flex;
+    flex-direction: row;
+    color: #dc3545;
+    
+   }
+   .main-section__contents .icons i{
+    padding: 0 5px;
+   }
+   .btn{
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    color: black;
+    font-size: 18px;
+   }
+   .btn-primary{
+    background-color: var(--warning);
+    border-radius: 20px;
+    font: size 18px;
+    transition: all .4s;
+
+   }
+   .btn-primary:hover{
+    background-color: var(--dark);
+    color: var(--light);
+   }
+   #information-1{
+    background: url(../html/spor-img/aaron-brogden-miCR9VIQ5PE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    font-size: 40px;
+   }
+   .information-1__content{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+   }
+   .information-1__content span{
+    font-size: 80px;
+    font-weight: 700;
+    
+    color: #fff;
+   }
+   .information-1__content h2{
+    color: #fe2f3e;
+   }
+   #motivation{
+    background: url(../html/spor-img/sven-mieke-jO6vBWX9h9Y-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+   
+    }
+.motivation__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    padding-left: 20px;
+}
+.motivation__content h2{
+    font-size: 50px;
+    color: #1aebf8;
+}
+.motivation__content span{
+    color: #fff;
+    padding: 0 10px;
+    font-size: 60px;
+    
+}
+.motivation__content p{
+    font-size: 20px;
+    padding: 5px;
+}
+.btn-secondary{
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #1aebf8;
+    transition: all .4s;
+}
+.btn-secondary:hover{
+background-color: black;
+color: #1aebf8;
+}
+#planlar{
+    background: url(../html/spor-img/alexander-jawfox-Kl2t5U6Gkm0-unsplash.jpg);
+    background-position: top;
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    
+}
+
+#planlar .plans{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 40px;
+}
+#planlar h4{
+    text-align: center;
+}
+.plan{
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--dark);
+    opacity: 0.8;
+    color: #fff;
+    height: 500px;
+
+}
+.planlar__tittle{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+.plan h2,h4{
+    padding: 5px;
+}
+.plan h2{
+    font-size: 30px;
+}
+.plan ul{
+    list-style: none;
+    padding: px;
+    width: 250px;
+    padding-left: 35px;
+}
+.plan ul li{
+    padding: 10px;
+    text-align: center;
+    color: rgb(199, 199, 199);
+    font-size: 20px;
+}
+.plan button{
+    
+    border: none;
+}
+.btn-plan{
+    border-radius: 15px;
+    border: 2px solid #fff!important;
+    background-color: var(--dark);
+    color: #fff;
+    transition: all .4s;
+}
+.btn-plan:hover{
+    border: 2px solid var(--dark);
+    background-color: #fff;
+    color: var(--dark);
+}
+.plan .btn-one{
+   padding: 10px 40px;
+}
+.plan-one{
+    border: 5px solid #4CAF50;
+}
+.plan-special{
+   grid-column: 1 / span 4;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--dark);
+   width: 100%;
+   opacity: 0.7;
+}
+.plan-special h2{
+    color: #fff;
+    font-size: 28px;
+    padding: 0 5px;
+}
+#footer{
+    background-color: var(--light);
+    color: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    height: 200px;
+}
+.footer__contanc{
+    padding-top: 20px 0;
+    font-size: 20px;
+}
+.footer__contanc h2{
+    padding-bottom: 10px;
+}
+.footer__contanc a{
+    text-decoration: none;
+    transition: all .4s;
+ }
+ .footer__contanc a{
+    color: var(--dark);
+ }
+ .footer__contanc a:hover{
+    color: var(--warning);
+ }
+ .footer__social{
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+ }
+ .footer__social h2{
+    font-size: 24px;
+ }
+ .footer__social i{
+    padding: 5px;
+ }
+ .footer__info{
+    grid-column: 1 / span 2 ;
+    padding: 20px;
+ }
+ @media(max-width:578px){
+   #main-header .container{
+    grid-template-columns: 1fr;
+   }
+   #main-header h1,span{
+    text-align: center;
+   }
+   #main-header ul{
+    flex-direction: column;
+   }
+   #main-header{
+    position: static;
+   }
+   .main-section__contents .icons{
+    color: #fff;
+   }
+   .motivation__content h2,span{
+    font-size: 25px;
+   }
+   #motivation{
+    width: 100%;
+    height: 600px;
+   }
+   #planlar .plans{
+   display: flex;
+   flex-direction: column;
+   }
+   #plan-special{
+    
+   }
+   #footer{
+    display: flex;
+    flex-direction: column;
+   }
+   #footer .footer__contanc,.footer__social,.footer__info{
+    padding: 10px 0;
+   }
+
+ }
+
+</style>
+</head>
+<body>
+    
+   <header id="main-header" class="main-header" >
+    <div class="container bg-dark">
+        
+     <h1>
+        <span>#</span> GYM
+    </h1>
+    <ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımda</a></li>
+        <li><a href="#">Programlar</a></li>
+        <li><a href="#">İletişim</a></li>
+    </ul>
+   </div>
+   </header>
+   <main>
+    <section id="main-section">
+        <div class="main-section__contents">
+            
+            
+                <h1>
+                    <span>#</span> BOZMAZ
+                </h1>
+                <div class="icons">
+                <i class="fab fa-instagram fa-1x"></i><i class="fab fa-youtube fa-1x"></i>
+            </div>
+            
+                <button class="btn btn-primary">PROGRAMLAR</button>
+            
+           </div>
+       </section>
+       <section id="information-1">
+        <div class="information-1__content">
+        <h2>
+        <span>+</span> HAKKIMDA
+    </h2>
+</div>
+
+       </section>
+       <section id="motivation">
+        <div class="motivation__content">
+        <h2>
+            <span>+</span> ASLAN GİBİ GÖZÜKMEK İÇİN
+            ASLANLARLA ÇALIŞMALISIN </h2>
+            <p>Amerika’yı yeniden keşfetmenize gerek yok, kendinizce uydurduğunuz “sistemlerin” literatürde yeri yok. Bu iş 10 senedir yok, 70 senedir insanlar elit düzeylerde bunu zaten yapıyor. Ya örnek alır, araştırır, kafanı kullanır yaparsın, ya da 5 senedir değişmeyen formun için yeni bahaneler ararsın.</p>
+            <button class="btn btn-secondary">PROGRAMLAR</button>
+       </div>
+
+       </section>
+       <section id="planlar">
+        <h2 class="planlar__tittle">PROGRAMLAR</h2>
+        <div class="plans">
+            <div class="plan">
+                <h4>1 AYLIK UZAKTAN EĞİTİM</h4>
+                <h2>550 TL</h2>
+                <ul>
+                    <li>Kişiye ve hedeflere özel</li>
+                    <li>hazırlanmış antrenman, beslenme ve supplement programı</li>
+                    <li>Haftadan haftaya ilerlemeler doğrultusunda revizyon</li>
+                    <li>Haftanın 7 Günü WhatsApp üzerinden iletişim</li>
+                    
+                </ul>
+                <button class="btn btn-plan">SATIN AL</button>
+            </div>
+       
+        
+            <div class="plan">
+                <h4>3 AYLIK UZAKTAN EĞİTİM</h4>
+                <h2>1500 TL</h2>
+                <ul>
+                    <li>Kişiye ve hedeflere özel</li>
+                    <li>hazırlanmış antrenman, beslenme ve supplement programı</li>
+                    <li>Haftadan haftaya ilerlemeler doğrultusunda revizyon</li>
+                    <li>Haftanın 7 Günü WhatsApp üzerinden iletişim</li>
+                    
+                </ul>
+                <button class="btn btn-plan">SATIN AL</button>
+            </div>
+        
+       
+            <div class="plan">
+                <h4>3 AYLIK TEAM ALAF</h4>
+                <h2>1950 TL</h2>
+                <ul>
+                    <li>Kişiye ve hedeflere özel</li>
+                    <li>hazırlanmış antrenman, beslenme ve supplement programı</li>
+                    <li>Haftadan haftaya ilerlemeler doğrultusunda revizyon</li>
+                    <li>Haftanın 7 Günü WhatsApp üzerinden iletişim</li>
+                    
+                </ul>
+                <button class="btn btn-plan">SATIN AL</button>
+            </div>
+        
+        
+            <div class="plan plan-one">
+                <h4>BİREBİR ÖZEL DERS</h4>
+                <button class="btn btn-plan btn-one">SATIN AL</button>
+                <ul>
+                    <li>Kişiye ve hedeflere özel</li>
+                    <li>hazırlanmış antrenman, beslenme ve supplement programı</li>
+                    <li>Haftadan haftaya ilerlemeler doğrultusunda revizyon</li>
+                    <li>Haftanın 7 Günü WhatsApp üzerinden iletişim</li>
+                    
+                </ul>
+               
+            </div>
+            <div class="plan-special">
+                <h2>BİREBİR ÖZEL DERS</h2>
+                <button class="btn btn-plan">İLETİŞİME GEÇ</button>
+            </div>
+        </div>
+       </section>
+   </main>
+   <footer id="footer">
+    <div class="footer__contanc">
+        <h2>İletişim</h2>
+       E-Posta:<a href="">semihbulut96@gmail.com</a>
+    </div>
+    <div class="footer__social">
+        <h2>Sosyal Medya</h2>
+        <div class="footer__icons">
+        <i class="fab fa-facebook fa-3x"></i>
+        <i class="fab fa-instagram fa-3x"></i>
+        <i class="fab fa-youtube fa-3x"></i>
+    </div>
+    </div>
+    <div class="footer__info">
+        <p>Copyright @ GYM - All Rights Reserved</p>
+    </div>
+   </footer>
+</body>
+</html>
